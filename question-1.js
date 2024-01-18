@@ -5,4 +5,13 @@ const inventory = {
   banana: { price: 10, quantity: 50 },
 };
 
-// เริ่มเขียนโค้ดตรงนี้
+inventory.apple.quantity = 200
+inventory.orange = { price: 20, quantity: 300}
+console.log(inventory)
+
+let totalOfInventory = 0;
+
+for (let sum in inventory) {
+    totalOfInventory += inventory[sum].price * inventory[sum].quantity
+}
+console.log(`Total inventory value: ${totalOfInventory} baht`)
